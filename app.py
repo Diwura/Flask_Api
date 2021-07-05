@@ -13,7 +13,7 @@ from resources.store import Store, StoreList
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URLsslmode=require','sqlite:///data.db').replace('postgres://', 'postgresql://')
+app.config['SQLALCHEMY_DATABASE_URL'] = os.environ.get('DATABASE_URLsslmode=require','sqlite:///data.db').replace('postgres://', 'postgresql://')
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key="diwu" #usualyy the secret key should be in an environment variable to ensure security of the application
